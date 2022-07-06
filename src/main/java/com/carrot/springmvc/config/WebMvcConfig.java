@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.carrot.springmvc.app.board.controller")
+@ComponentScan("com.carrot.springmvc.app.*")
 
 public class WebMvcConfig implements WebMvcConfigurer {
 
