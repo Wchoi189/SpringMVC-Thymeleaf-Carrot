@@ -23,8 +23,6 @@ import java.util.concurrent.TimeUnit;
 @ComponentScan("com.carrot.springmvc.app.*")
 
 public class WebMvcConfig implements WebMvcConfigurer {
-
-
     private ApplicationContext applicationContext;
     // + JSP View Resolver
     @Bean

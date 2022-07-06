@@ -13,6 +13,7 @@ import java.io.IOException;
 @MapperScan("classpath:mybatis")
 public class MyBatisConfig {
 
+
     @Bean
     public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource) throws IOException {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
