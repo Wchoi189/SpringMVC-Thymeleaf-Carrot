@@ -38,8 +38,8 @@ public class MyBatisConfig {
             throw new RuntimeException(e);
         }
         ds.setJdbcUrl("jdbc:mysql://localhost/shop?characterEncoding=utf8");
-        ds.setUser("spring");
-        ds.setPassword("spring");
+        ds.setUser("user");
+        ds.setPassword("pass");
         return ds;
     }
 

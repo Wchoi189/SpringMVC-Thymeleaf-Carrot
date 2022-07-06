@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="springmvc:war exploded" />
+      <artifact name="SpringMVC-Thymeleaf-Carrot:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b0f39d4-a7c9-4ba0-87b1-c9ca03c817a6" name="Changes" comment="working on DAO">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/MyBatisBoardDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/MyBatisBoardDAO2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/boardMapperXML.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/springmvc_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/BoardDAOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/model/BoardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/model/BoardDTO.java" afterDir="false" />
+    <list default="true" id="2b0f39d4-a7c9-4ba0-87b1-c9ca03c817a6" name="Changes" comment="dao dependency error">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/controller/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/MyBatisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/MyBatisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +69,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/wbc89/Desktop/my.workplace/SpringMVC-Thymeleaf-Carrot/src/main/resources/mybatis",
     "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
+    "project.structure.proportion": "0.15332031",
     "project.structure.side.proportion": "0.32873562",
     "spring.configuration.checksum": "47d2f8992c27ad6def6e33c45e70a93b"
   },
@@ -230,7 +221,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657083599737</updated>
       <workItem from="1657083601476" duration="13679000" />
-      <workItem from="1657114090096" duration="5014000" />
+      <workItem from="1657114090096" duration="5331000" />
     </task>
     <task id="LOCAL-00001" summary="Setup files. Thymeleaf. Folder structures defined.">
       <created>1657084790369</created>
@@ -253,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657096025554</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="dao dependency error">
+      <created>1657119631272</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657119631272</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +273,7 @@
     <MESSAGE value="한글깨짐 FIX" />
     <MESSAGE value="working on mybatis" />
     <MESSAGE value="working on DAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on DAO" />
+    <MESSAGE value="dao dependency error" />
+    <option name="LAST_COMMIT_MESSAGE" value="dao dependency error" />
   </component>
 </project>
