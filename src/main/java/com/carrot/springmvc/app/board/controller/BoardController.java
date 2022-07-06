@@ -8,8 +8,14 @@ public class BoardController {
 
 
     @GetMapping("/")
-    public String hello() {
-        System.out.println("controller here..");
-        return "index";
+    public String boardList() {
+        System.out.println("board_index.html");
+        return "board_index";
+    }
+
+    @GetMapping("/boardInsert")
+    public String boardInsert() {
+        System.out.println("/insert");
+        return "board_insert";
     }
 }

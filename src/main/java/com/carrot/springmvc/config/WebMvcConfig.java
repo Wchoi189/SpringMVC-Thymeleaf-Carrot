@@ -8,6 +8,7 @@ import org.springframework.http.CacheControl;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
@@ -35,29 +36,42 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return viewResolver;
     }
 
-    @Bean
-    public ViewResolver thymeleafResolver() {
-        ThymeleafViewResolver ivr = new ThymeleafViewResolver();
-        ivr.setTemplateEngine(templateEngine());
-        ivr.setOrder(0);
-        return ivr;
-    }
-
+    /*
+     * STEP 1 - Create SpringResourceTemplateResolver
+     * */
     @Bean
     public SpringResourceTemplateResolver templateResolver() {
-        SpringResourceTemplateResolver srtr = new SpringResourceTemplateResolver();
-        srtr.setApplicationContext(applicationContext);
-        srtr.setPrefix("/WEB-INF/views/html/");
-        srtr.setSuffix(".html");
-        return srtr;
+        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+        templateResolver.setApplicationContext(applicationContext);
+        templateResolver.setPrefix("/WEB-INF/views/html/");
+        templateResolver.setSuffix(".html");
+        templateResolver.setCharacterEncoding("utf-8");
+        templateResolver.setCacheable(false);
+        return templateResolver;
     }
 
+    /*
+     * STEP 2 - Create SpringTemplateEngine
+     * */
     @Bean
     public SpringTemplateEngine templateEngine() {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
         templateEngine.setEnableSpringELCompiler(true);
+
         return templateEngine;
+    }
+
+    /*
+     * STEP 3 - Register ThymeleafViewResolver
+     * */
+    @Override
+    public void configureViewResolvers(ViewResolverRegistry registry) {
+        ThymeleafViewResolver resolver = new ThymeleafViewResolver();
+        resolver.setTemplateEngine(templateEngine());
+        resolver.setCharacterEncoding("UTF-8"); // 한글 깨짐 방지
+        registry.viewResolver(resolver);
+
     }
 
     @Override
@@ -65,7 +79,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         WebMvcConfigurer.super.addResourceHandlers(registry);
         // Static Resources 설정
         registry.addResourceHandler("/**","/resources/**")
-                .addResourceLocations("classpath:/static/**/*","/resources/**/*")
+                .addResourceLocations("classpath:/static/","/resources/")
                 .setCacheControl(CacheControl.maxAge(10, TimeUnit.MINUTES));
     }
 
