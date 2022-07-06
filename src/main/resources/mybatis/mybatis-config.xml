@@ -13,13 +13,17 @@
             <setting name="defaultStatementTimeout" value="25000" />
         </settings>
 
+    <!--    VO객체 설정-->
+
     <typeAliases>
         <typeAlias alias="hashmap" type="java.util.HashMap" />
         <typeAlias alias="Int" type="java.lang.Integer" />
-        <typeAlias alias="boardDTO" type="com.board.dto.BoardDTO"/>
+        <typeAlias alias="Board" type="com.board.dto.BoardDTO"/>
+        <typeAlias alias="ns" type="com.board.dao.BoardDAO"/>
+
     </typeAliases>
 
     <mappers>
-        <mapper resource="classpath:/mappers/mapper.xml" />
+        <mapper resource="classpath:/mybatis/*.xml" />
     </mappers>
 </configuration>

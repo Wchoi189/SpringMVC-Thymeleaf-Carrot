@@ -10,14 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b0f39d4-a7c9-4ba0-87b1-c9ca03c817a6" name="Changes" comment="working on DAO">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/BoardDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/BoardDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/model/BoardDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/mapper/BoardMapperJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/MyBatisBoardDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/MyBatisBoardDAO2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/boardMapperXML.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/springmvc_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/ContextDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/ContextDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/BoardDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/model/BoardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/model/BoardDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/MyBatisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/MyBatisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,10 +76,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/data/spring-mvc/springmvc/src/main/resources/mybatis",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "last_opened_file_path": "C:/Users/wbc89/Desktop/my.workplace/SpringMVC-Thymeleaf-Carrot/src/main/resources/mybatis",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.32873562",
+    "spring.configuration.checksum": "47d2f8992c27ad6def6e33c45e70a93b"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -86,11 +90,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\wbc89\Desktop\my.workplace\SpringMVC-Thymeleaf-Carrot\src\main\resources\mybatis" />
       <recent name="C:\data\spring-mvc\springmvc\src\main\resources\mybatis" />
       <recent name="C:\data\spring-mvc\springmvc\src\main\resources" />
       <recent name="C:\data\spring-mvc\springmvc\src\main\webapp\WEB-INF" />
       <recent name="C:\data\spring-mvc\springmvc\src\main" />
-      <recent name="C:\data\spring-mvc\springmvc\web\WEB-INF" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\data\spring-mvc\springmvc\src\main\webapp\WEB-INF\views" />
@@ -100,7 +104,7 @@
       <recent name="com.carrot.springmvc.app.board.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DataSourceTest">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.81">
     <configuration name="DataSourceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataSourceTest" />
       <module name="springmvc" />
@@ -120,14 +124,15 @@
     <configuration name="Tomcat 8.5.81" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.81" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="11" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="springmvc:war exploded">
+        <artifact name="SpringMVC-Thymeleaf-Carrot:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/SpringMVC_Thymeleaf_Carrot_war_exploded" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="cc8dc40c-fa02-4121-abeb-e6e0d26e0031" />
+        <option name="HTTP_PORT" value="8088" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -200,7 +205,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="springmvc:war exploded" />
+          <artifact name="SpringMVC-Thymeleaf-Carrot:war exploded" />
         </option>
       </method>
     </configuration>
@@ -225,6 +230,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657083599737</updated>
       <workItem from="1657083601476" duration="13679000" />
+      <workItem from="1657114090096" duration="5014000" />
     </task>
     <task id="LOCAL-00001" summary="Setup files. Thymeleaf. Folder structures defined.">
       <created>1657084790369</created>

@@ -1,7 +1,10 @@
 package com.carrot.springmvc.app.board.model;
 
+import org.apache.ibatis.type.Alias;
+
 import java.util.Date;
 
+@Alias("Board")
 public class BoardDTO {
     private String boardId;
     private String title;
