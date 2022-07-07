@@ -2,6 +2,7 @@ package com.carrot.springmvc.app.board.controller;
 
 import com.carrot.springmvc.app.board.dao.BoardDAO;
 import com.carrot.springmvc.app.board.model.BoardDTO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Controller
 public class BoardController {
-
+@Autowired
     BoardDAO boardDAO;
     @GetMapping("/")
     public String boardHome (Model theModel1) {
