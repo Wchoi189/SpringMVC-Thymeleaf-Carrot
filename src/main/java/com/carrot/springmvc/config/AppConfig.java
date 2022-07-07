@@ -4,6 +4,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import({DBConfig.class, MyBatisConfig.class})
+@Import({DBConfig.class, JavaConfigMyBatis.class})
 public class AppConfig {
 }

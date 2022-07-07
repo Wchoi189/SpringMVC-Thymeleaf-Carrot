@@ -2,7 +2,6 @@ package com.carrot.springmvc.config;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.Bean;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
@@ -13,9 +12,9 @@ public class ContextDataSource {
 
         BasicDataSource dataSource = new BasicDataSource();
 
-        dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 
-        dataSource.setUrl("jdbc:mariadb://127.0.0.1:3306/interview_assignment_db");
+        dataSource.setUrl("jdbc:mysql://127.0.0.1:3306/interview_assignment_db");
 
         dataSource.setUsername("user");
 

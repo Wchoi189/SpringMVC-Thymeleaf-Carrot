@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.board.dao.BoardDAO">
+<mapper namespace="com.carrot.springmvc.app.board.dao.BoardDAO">
     <select id="select" parameterType="String" resultType="Board">
         select title, file_name, save_path, reg_date
         from board
         where board_id = #{boardid}
     </select>
 
-    <select id="list" parameterType="String" resultType="Board">
+    <select id="getBoardList" parameterType="String" resultType="com.carrot.springmvc.app.board.model.BoardDTO">
         select *
         from board
     </select>

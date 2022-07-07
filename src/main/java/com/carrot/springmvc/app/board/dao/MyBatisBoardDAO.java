@@ -10,9 +10,9 @@ import java.util.List;
 
 @Repository
 public class MyBatisBoardDAO implements BoardDAO {
-    @Autowired
+@Autowired
     private SqlSession sqlSession;
-    String namespace = "com.board.dao.BoardDAO";
+    String namespace = "com.carrot.springmvc.app.board.dao.BoardDAO";
     public void setSqlSession(SqlSession sqlSession) {
         this.sqlSession = sqlSession;
     }
@@ -20,7 +20,7 @@ public class MyBatisBoardDAO implements BoardDAO {
 
     @Override
     public List<BoardDTO> getBoardList() {
-        return sqlSession.selectList(namespace+ ".list");
+        return sqlSession.selectList(namespace+ ".getBoardList");
     }
 
     @Override

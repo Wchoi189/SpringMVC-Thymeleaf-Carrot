@@ -19,7 +19,7 @@
         <typeAlias alias="hashmap" type="java.util.HashMap" />
         <typeAlias alias="Int" type="java.lang.Integer" />
         <typeAlias alias="Board" type="com.board.dto.BoardDTO"/>
-        <typeAlias alias="ns" type="com.board.dao.BoardDAO"/>
+        <typeAlias alias="ns" type="com.board.dao.BoardDAOImpl"/>
 
     </typeAliases>
 

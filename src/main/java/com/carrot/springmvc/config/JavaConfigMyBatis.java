@@ -1,15 +1,14 @@
 package com.carrot.springmvc.config;
 
+import com.carrot.springmvc.app.board.dao.BoardDAO;
 import com.carrot.springmvc.app.board.model.BoardDTO;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -17,12 +16,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
-import java.io.IOException;
 
 @Configuration
 @EnableTransactionManagement
 //@MapperScan("classpath:mybatis")
-public class MyBatisConfig {
+public class JavaConfigMyBatis {
+
 
     @Bean
     public PersistenceExceptionTranslationPostProcessor postProcessor() {
@@ -37,7 +36,7 @@ public class MyBatisConfig {
         } catch (PropertyVetoException e) {
             throw new RuntimeException(e);
         }
-        ds.setJdbcUrl("jdbc:mysql://localhost/shop?characterEncoding=utf8");
+        ds.setJdbcUrl("jdbc:mysql://127.0.0.1:3306/interview_assignment_db");
         ds.setUser("user");
         ds.setPassword("pass");
         return ds;
@@ -65,6 +64,12 @@ public class MyBatisConfig {
     public SqlSessionTemplate sqlSessionTemplate() throws Exception {
         return new SqlSessionTemplate(sqlSessionFactory().getObject());
     }
+
+    @Bean
+    public  BoardDAO boardDAO() throws Exception {
+        return sqlSessionTemplate().getMapper(BoardDAO.class);
+    }
+
 }
 //    @Bean
 //    public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource) throws IOException {
