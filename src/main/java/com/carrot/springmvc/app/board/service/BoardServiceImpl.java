@@ -2,15 +2,14 @@ package com.carrot.springmvc.app.board.service;
 
 import com.carrot.springmvc.app.board.dao.MyBatisBoardDAO;
 import com.carrot.springmvc.app.board.model.BoardDTO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("boardService")
+@Service
 public class BoardServiceImpl implements BoardService {
 
-    @Autowired
+
     private MyBatisBoardDAO boardDAO;
 
     public BoardServiceImpl () {
