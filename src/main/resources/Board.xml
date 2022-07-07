@@ -8,12 +8,12 @@
        http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 
-    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg ref="sqlSessionFactory" />
-    </bean>
+<!--    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">-->
+<!--        <constructor-arg ref="sqlSessionFactory" />-->
+<!--    </bean>-->
 
-    <bean id="BoardDAO" class="com.carrot.springmvc.app.board.dao.MyBatisBoardDAO">
-        <property name="sqlSession" ref="sqlSessionTemplate" />
-    </bean>
+<!--    <bean id="BoardDAO" class="com.carrot.springmvc.app.board.dao.MyBatisBoardDAO">-->
+<!--        <property name="sqlSession" ref="sqlSession" />-->
+<!--    </bean>-->
 
 </beans>

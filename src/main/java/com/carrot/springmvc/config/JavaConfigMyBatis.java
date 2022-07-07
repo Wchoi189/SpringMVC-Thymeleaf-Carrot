@@ -1,14 +1,13 @@
 package com.carrot.springmvc.config;
 
 import com.carrot.springmvc.app.board.dao.BoardDAO;
-import com.carrot.springmvc.app.board.model.BoardDTO;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -19,7 +18,7 @@ import java.beans.PropertyVetoException;
 
 @Configuration
 @EnableTransactionManagement
-//@MapperScan("classpath:mybatis")
+@MapperScan("com.carrot.springmvc.mapper")
 public class JavaConfigMyBatis {
 
 
@@ -49,26 +48,42 @@ public class JavaConfigMyBatis {
         return tm;
     }
 
+    //SqlSessionFactoryBean 등록. DataSource 주입.
     @Bean
-    public SqlSessionFactoryBean sqlSessionFactory() throws Exception {
-        SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
-        factoryBean.setDataSource(dataSource());
-        Resource[] mapperLocations = new Resource[2];
-        mapperLocations[0] = new ClassPathResource("/mybatis/boardMapperXML.xml");
-        factoryBean.setMapperLocations(mapperLocations);
-        factoryBean.setTypeAliases(new Class<?>[] { BoardDTO.class });
-        return factoryBean;
+    public SqlSessionFactory sqlSessionFactory() throws Exception {
+        SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
+        sqlSessionFactory.setDataSource(dataSource());
+        return sqlSessionFactory.getObject();
     }
 
     @Bean
-    public SqlSessionTemplate sqlSessionTemplate() throws Exception {
-        return new SqlSessionTemplate(sqlSessionFactory().getObject());
+    public BoardDAO BoardDAO() throws Exception {
+        SqlSessionTemplate sessionTemplate = new SqlSessionTemplate(sqlSessionFactory());
+        return sessionTemplate.getMapper(BoardDAO.class);
     }
 
-    @Bean
-    public  BoardDAO boardDAO() throws Exception {
-        return sqlSessionTemplate().getMapper(BoardDAO.class);
-    }
+//    @Bean
+//    public SqlSessionFactoryBean sqlSessionFactory() throws Exception {
+//        SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
+//        factoryBean.setDataSource(dataSource());
+//        Resource[] mapperLocations = new Resource[2];
+//        mapperLocations[0] = new ClassPathResource("/mybatis/boardMapperXML.xml");
+//        mapperLocations[1] = new ClassPathResource("com.carrot.springmvc.mapper.*");
+//
+//        factoryBean.setMapperLocations(mapperLocations);
+//        factoryBean.setTypeAliases(new Class<?>[] { BoardDTO.class });
+//        return factoryBean;
+//    }
+//
+//    @Bean
+//    public SqlSessionTemplate sqlSessionTemplate() throws Exception {
+//        return new SqlSessionTemplate(Objects.requireNonNull(sqlSessionFactory().getObject()));
+//    }
+//
+//    @Bean
+//    public BoardDAO boardDAO() throws Exception {
+//        return sqlSessionTemplate().getMapper(BoardDAO.class);
+//    }
 
 }
 //    @Bean
