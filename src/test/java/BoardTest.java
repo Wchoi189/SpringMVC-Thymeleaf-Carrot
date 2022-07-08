@@ -31,7 +31,7 @@ public class BoardTest {
         System.out.println(session.getClass().getName());
     }
 
-    @Test@Ignore
+    @Test
     public void listBoard () {
         List<BoardDTO> boardList = boardService.getBoardList();
         for(BoardDTO boardDTO : boardList){
