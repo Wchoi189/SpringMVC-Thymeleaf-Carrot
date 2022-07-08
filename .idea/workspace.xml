@@ -9,12 +9,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b0f39d4-a7c9-4ba0-87b1-c9ca03c817a6" name="Changes" comment="not working either. same error. unsatisfied dependency.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/application-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-context.xml" afterDir="false" />
+    <list default="true" id="2b0f39d4-a7c9-4ba0-87b1-c9ca03c817a6" name="Changes" comment="Autowire = Bean error">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/BoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/BoardDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/MyBatisBoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/MyBatisBoardDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/JavaConfigMyBatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/JavaConfigMyBatis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/model/BoardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/model/BoardDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/service/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/service/BoardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/SqlMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/SqlMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/mapper/BoardMapperJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/mapper/BoardMapperJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/application-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/application-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/boardMapperXML.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/boardMapperXML.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/sqlMapConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-context.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,12 +85,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/data/board3",
-    "project.structure.last.edited": "Facets",
+    "last_opened_file_path": "C:/Users/Carrot/Downloads/mysql-connector-java-8.0.29/mysql-connector-java-8.0.29.jar",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.import",
-    "spring.configuration.checksum": "47d2f8992c27ad6def6e33c45e70a93b"
+    "settings.editor.selected.configurable": "spring.boot",
+    "spring.configuration.checksum": "701f120c1895ba7c9afc5cbebde8de0c"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -95,6 +107,7 @@
       <recent name="C:\data\spring-mvc\springmvc\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\data\spring-mvc\springmvc\src\main\resources\mybatis\mapper" />
       <recent name="C:\data\spring-mvc\springmvc\src\main\resources\mybatis" />
       <recent name="C:\data\spring-mvc\springmvc\src\main\webapp\WEB-INF\views" />
     </key>
@@ -104,18 +117,52 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.81">
-    <configuration name="DataSourceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataSourceTest" />
+    <configuration name="BoardTest.boardRead" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springmvc" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BoardTest" />
+      <option name="METHOD_NAME" value="boardRead" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataSourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BoardTest.deleteBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springmvc" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DataSourceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="BoardTest" />
+      <option name="METHOD_NAME" value="deleteBoard" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoardTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springmvc" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BoardTest" />
+      <option name="METHOD_NAME" value="insert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoardTest.listBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springmvc" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BoardTest" />
+      <option name="METHOD_NAME" value="listBoard" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoardTest.updateBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springmvc" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BoardTest" />
+      <option name="METHOD_NAME" value="updateBoard" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -211,14 +258,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DataSourceTest" />
-      <item itemvalue="JUnit.DataSourceTest" />
+      <item itemvalue="JUnit.BoardTest.boardRead" />
+      <item itemvalue="JUnit.BoardTest.deleteBoard" />
+      <item itemvalue="JUnit.BoardTest.insert" />
+      <item itemvalue="JUnit.BoardTest.listBoard" />
+      <item itemvalue="JUnit.BoardTest.updateBoard" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.81" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DataSourceTest" />
-        <item itemvalue="Application.DataSourceTest" />
+        <item itemvalue="JUnit.BoardTest.updateBoard" />
+        <item itemvalue="JUnit.BoardTest.deleteBoard" />
+        <item itemvalue="JUnit.BoardTest.insert" />
+        <item itemvalue="JUnit.BoardTest.boardRead" />
+        <item itemvalue="JUnit.BoardTest.listBoard" />
       </list>
     </recent_temporary>
   </component>
@@ -232,6 +285,7 @@
       <updated>1657083599737</updated>
       <workItem from="1657083601476" duration="13679000" />
       <workItem from="1657114090096" duration="5331000" />
+      <workItem from="1657240235912" duration="17360000" />
     </task>
     <task id="LOCAL-00001" summary="Setup files. Thymeleaf. Folder structures defined.">
       <created>1657084790369</created>
@@ -301,5 +355,9 @@
     <MESSAGE value="still not working. changing branches to experiment" />
     <MESSAGE value="not working either. same error. unsatisfied dependency." />
     <option name="LAST_COMMIT_MESSAGE" value="not working either. same error. unsatisfied dependency." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

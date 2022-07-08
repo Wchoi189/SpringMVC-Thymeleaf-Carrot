@@ -14,7 +14,7 @@ package com.carrot.springmvc.config;
 //    public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource) throws IOException {
 //        SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
 //        factoryBean.setDataSource(dataSource);
-//        factoryBean.setConfigLocation(applicationContext.getResource("classpath:/mybatis/mybatis-config.xml"));
+//        factoryBean.setConfigLocation(applicationContext.getResource("classpath:/mybatis/sqlMapConfig.xml"));
 //        factoryBean.setMapperLocations(applicationContext.getResources("classpath:/mybatis/mapper/*.xml"));
 //        return factoryBean;
 //    }

@@ -1,23 +1,29 @@
 package com.carrot.springmvc.app.board.model;
 
-import org.apache.ibatis.type.Alias;
-
 import java.util.Date;
 
-@Alias("Board")
+
 public class BoardDTO {
-    private String boardId;
+    private int board_id;
     private String title;
     private String file_name;
-    private String file_path;
-    private Date date;
+    private String save_path;
+//    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss", timezone="Asia/Seoul")
+    private Date reg_date;
 
-    public String getBoardId() {
-        return boardId;
+//    public BoardDTO(String title, String file_name, String save_path, Date reg_date) {
+//        this.title = title;
+//        this.file_name = file_name;
+//        this.save_path = save_path;
+//        this.reg_date = reg_date;
+//    }
+
+    public int getBoard_id() {
+        return board_id;
     }
 
-    public void setBoardId(String boardId) {
-        this.boardId = boardId;
+    public void setBoard_id(int board_id) {
+        this.board_id = board_id;
     }
 
     public String getTitle() {
@@ -36,30 +42,30 @@ public class BoardDTO {
         this.file_name = file_name;
     }
 
-    public String getFile_path() {
-        return file_path;
+    public String getSave_path() {
+        return save_path;
     }
 
-    public void setFile_path(String file_path) {
-        this.file_path = file_path;
+    public void setSave_path(String save_path) {
+        this.save_path = save_path;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getReg_date() {
+        return reg_date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setReg_date(Date reg_date) {
+        this.reg_date = reg_date;
     }
 
     @Override
     public String toString() {
         return "BoardDTO{" +
-                "boardId=" + boardId +
+                "board_id='" + board_id + '\'' +
                 ", title='" + title + '\'' +
                 ", file_name='" + file_name + '\'' +
-                ", file_path='" + file_path + '\'' +
-                ", date=" + date +
+                ", save_path='" + save_path + '\'' +
+                ", reg_date=" + reg_date +
                 '}';
     }
 }

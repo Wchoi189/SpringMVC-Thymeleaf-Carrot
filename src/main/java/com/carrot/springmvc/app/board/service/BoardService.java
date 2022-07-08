@@ -1,13 +1,16 @@
 package com.carrot.springmvc.app.board.service;
 
 import com.carrot.springmvc.app.board.model.BoardDTO;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public interface BoardService {
-    public List<BoardDTO> getBoardList();
-    public void insertBoard (BoardDTO theBoard);
-    public BoardDTO readBoardById(String board_Id);
-    public void updateBoardById(BoardDTO theBoard);
-    public void deleteBoardById(String board_Id);
+List<BoardDTO> getBoardList();
+void insertBoard (BoardDTO theBoard);
+BoardDTO readBoardById(int board_id);
+void updateBoard(BoardDTO theBoard);
+void deleteBoardById(int board_id);
+
 }

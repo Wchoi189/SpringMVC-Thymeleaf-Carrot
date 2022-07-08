@@ -1,47 +1,43 @@
 package com.carrot.springmvc.app.board.dao;
 
 import com.carrot.springmvc.app.board.model.BoardDTO;
-import org.mybatis.spring.support.SqlSessionDaoSupport;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 
 @Repository
-public class MyBatisBoardDAO extends SqlSessionDaoSupport implements BoardDAO {
-
-
-
-
+public class MyBatisBoardDAO implements BoardDAO {
 
     //Autowired는 메로리에 이 객체의 매게변수-타입의 존재 여부를 확인 하고 대입 한다
-
+    @Autowired
+    private SqlSession session;
 
     String namespace = "com.carrot.springmvc.app.board.dao.BoardDAO";
 
 
-
     public List<BoardDTO> getBoardList() {
-        return getSqlSession().selectList(namespace+ ".getBoardList");
+       List<BoardDTO> dto = session.selectList(namespace+ ".getBoardList");
+        return dto;
     }
-
 
     public void insertBoard(BoardDTO theBoard) {
-        getSqlSession().insert(namespace + ".insert", theBoard);
+        session.insert(namespace + ".insertBoard", theBoard);
+    }
+
+    public BoardDTO readBoardById(String board_id) {
+        BoardDTO dto = session.selectOne(namespace + ".select", board_id);
+        return dto;
+    }
+
+    public void updateBoard(BoardDTO theBoard) {
+        session.update(namespace + ".update", theBoard);
     }
 
 
-    public BoardDTO readBoardById(String board_Id) {
-        return getSqlSession().selectOne(namespace + ".select", board_Id);
-    }
-
-
-    public void updateBoardById(BoardDTO theBoard) {
-        getSqlSession().update(namespace + ".update", theBoard);
-    }
-
-
-    public void deleteBoardById(String board_Id) { getSqlSession().delete(namespace+".delete", board_Id);
+    public void deleteBoardById(String board_Id) { session.delete(namespace+".delete", board_Id);
     }
 }
 
