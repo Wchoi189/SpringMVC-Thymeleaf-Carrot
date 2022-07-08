@@ -31,7 +31,7 @@ public class BoardTest {
         System.out.println(session.getClass().getName());
     }
 
-    @Test @Ignore
+    @Test@Ignore
     public void listBoard () {
         List<BoardDTO> boardList = boardService.getBoardList();
         for(BoardDTO boardDTO : boardList){
@@ -54,9 +54,9 @@ public class BoardTest {
         boardService.insertBoard(dto);
     }
 
-    @Test @Ignore
+    @Test
     public void deleteBoard () {
-        boardService.deleteBoardById(2);
+        boardService.deleteBoardById(5);
         System.out.println("check delete results.. ");
 
     }

@@ -2,16 +2,22 @@ package com.carrot.springmvc.app.board.service;
 
 import com.carrot.springmvc.app.board.model.BoardDTO;
 import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service("Service")
 public class BoardServiceImpl implements BoardService {
 
-@Autowired
+//@Autowired
+//    private SqlSession sqlSession;
+
+
     private SqlSession sqlSession;
     String namespace = "com.carrot.springmvc.app.board.dao.BoardDAO";
+
+    public BoardServiceImpl(SqlSession sqlSession) {
+        this.sqlSession = sqlSession;
+    }
 
     @Override
     public List<BoardDTO> getBoardList() {
