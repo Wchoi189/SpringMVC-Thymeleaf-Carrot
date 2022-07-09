@@ -5,7 +5,7 @@ import com.carrot.springmvc.app.board.model.BoardDTO;
 import java.util.List;
 
 
-public interface BoardService {
+public interface IBoardService {
 List<BoardDTO> getBoardList();
 void insertBoard (BoardDTO theBoard);
 BoardDTO readBoardById(int board_id);

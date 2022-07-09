@@ -1,4 +1,4 @@
-package com.carrot.springmvc.config;
+package com.carrot.springmvc.app.board.config;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;

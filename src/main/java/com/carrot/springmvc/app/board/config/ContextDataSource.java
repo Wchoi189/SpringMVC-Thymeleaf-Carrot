@@ -1,13 +1,16 @@
-package com.carrot.springmvc.config;
+package com.carrot.springmvc.app.board.config;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
+@Configuration
 @EnableTransactionManagement
 public class ContextDataSource {
-    @Bean
+
+    @Bean("data")
     public DataSource dataSource() {
 
         BasicDataSource dataSource = new BasicDataSource();

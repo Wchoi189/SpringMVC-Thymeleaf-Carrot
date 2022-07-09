@@ -1,4 +1,4 @@
-package com.carrot.springmvc.config;
+package com.carrot.springmvc.app.board.config;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Value;

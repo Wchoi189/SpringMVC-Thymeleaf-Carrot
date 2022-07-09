@@ -1,4 +1,4 @@
-package com.carrot.springmvc.config;
+package com.carrot.springmvc.app.board.config;
 
 import org.springframework.context.annotation.Configuration;
 

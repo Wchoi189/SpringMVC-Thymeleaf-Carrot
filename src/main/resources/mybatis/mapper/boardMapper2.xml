@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.carrot.springmvc.app.board.dao.BoardDAO">
+    <resultMap id="result" type="Board">
+        <id property="id" column="board_id" />
+        <result property="title" column="title" />
+        <result property="file_name" column="file_name" />
+        <result property="save_path" column="save_path" />
+        <result property="reg_date" column="reg_date" />
+    </resultMap>
+
+    <select id="getBoardList" resultType="Board" resultMap="result">
+        SELECT * FROM board
+    </select>
+</mapper>

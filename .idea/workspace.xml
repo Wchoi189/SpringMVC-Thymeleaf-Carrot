@@ -9,10 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b0f39d4-a7c9-4ba0-87b1-c9ca03c817a6" name="Changes" comment="Autowire = Bean error">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="2b0f39d4-a7c9-4ba0-87b1-c9ca03c817a6" name="Changes" comment="Home Junit test, Ok">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/config/MyBatisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/boardMapper2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DataSourceTestInjectMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/MyBatisBoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/dao/MyBatisBoardDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/service/IBoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/service/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/service/BoardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/AppContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/config/AppContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/config/AppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/ContextDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/config/ContextDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/DBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/config/DBConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/JavaConfigMyBatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/config/JavaConfigMyBatis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/SqlMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/config/SqlMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/mapper/BoardMapperJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/mapper/BoardMapperJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/sqlMapConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/sqlMapConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BoardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +58,17 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sqldaosupport" />
+        <entry key="$PROJECT_DIR$" value="SqlSession_JUnit_test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/config/ContextDataSource.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/config/JavaConfigMyBatis.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/config/WebMvcConfig.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/carrot/springmvc/app/board/controller/BoardController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/DataSourceTestInjectMethod.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -56,7 +80,7 @@
     <option name="myId2Visible">
       <map>
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -85,7 +109,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Carrot/Downloads/mysql-connector-java-8.0.29/mysql-connector-java-8.0.29.jar",
+    "last_opened_file_path": "C:/Users/wbc89/Desktop/my.workplace/SpringMVC-MyBatis-Demo",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -286,7 +310,7 @@
       <workItem from="1657083601476" duration="13679000" />
       <workItem from="1657114090096" duration="5331000" />
       <workItem from="1657240235912" duration="17360000" />
-      <workItem from="1657282582761" duration="1071000" />
+      <workItem from="1657282582761" duration="13721000" />
     </task>
     <task id="LOCAL-00001" summary="Setup files. Thymeleaf. Folder structures defined.">
       <created>1657084790369</created>
@@ -330,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657181289300</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Home Junit test, Ok">
+      <created>1657283924237</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657283924237</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +386,8 @@
     <MESSAGE value="dao dependency error" />
     <MESSAGE value="still not working. changing branches to experiment" />
     <MESSAGE value="not working either. same error. unsatisfied dependency." />
-    <option name="LAST_COMMIT_MESSAGE" value="not working either. same error. unsatisfied dependency." />
+    <MESSAGE value="Home Junit test, Ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Junit test, Ok" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

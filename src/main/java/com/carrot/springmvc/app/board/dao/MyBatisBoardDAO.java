@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 
-@Repository
+@Repository("BoardDAO")
 public class MyBatisBoardDAO implements BoardDAO {
 
     //Autowired는 메로리에 이 객체의 매게변수-타입의 존재 여부를 확인 하고 대입 한다

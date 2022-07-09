@@ -1,9 +1,10 @@
 package com.carrot.springmvc.app.board.controller;
 
+import com.carrot.springmvc.app.board.dao.BoardDAO;
 import com.carrot.springmvc.app.board.model.BoardDTO;
-import com.carrot.springmvc.app.board.service.BoardService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,14 +19,18 @@ public class BoardController {
     private final Logger LOGGER = LoggerFactory.getLogger(getClass());
 
 //@Qualifier("Service")
+@Autowired
+@Qualifier("BoardDAO")
+private BoardDAO boardDAO;
 
+//    private BoardService boardDAO;
 
-    private BoardService boardDAO;
+//    public BoardController(@Qualifier("Service") BoardService boardDAO) {
+//        this.boardDAO = boardDAO;
+//    }
 
-    public BoardController(@Qualifier("Service") BoardService boardDAO) {
-        this.boardDAO = boardDAO;
-    }
-
+//    @Autowired
+//    BoardMapper boardDAO;
 
     @GetMapping("/")
     public String boardHome (Model theModel1) {
@@ -45,8 +50,8 @@ public class BoardController {
 
     @PostMapping ( "/boardInsert")
     public String boardInsert(@RequestBody BoardDTO theBoard, Model theModel) {
-        boardDAO.insertBoard(theBoard);
-        System.out.println("/insert");
+//        boardDAO.insertBoard(theBoard);
+//        System.out.println("/insert");
         return "board_insert";
     }
 }

@@ -1,6 +1,6 @@
 import com.carrot.springmvc.app.board.dao.BoardDAO;
 import com.carrot.springmvc.app.board.model.BoardDTO;
-import com.carrot.springmvc.app.board.service.BoardService;
+import com.carrot.springmvc.app.board.service.IBoardService;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -20,7 +20,7 @@ public class BoardTest {
     ApplicationContext applicationContext;
 
     @Autowired
-    private BoardService boardService;
+    private IBoardService IBoardService;
 
     @Autowired
     private BoardDAO dao;
@@ -33,14 +33,14 @@ public class BoardTest {
 
     @Test
     public void listBoard () {
-        List<BoardDTO> boardList = boardService.getBoardList();
+        List<BoardDTO> boardList = IBoardService.getBoardList();
         for(BoardDTO boardDTO : boardList){
             System.out.println(boardDTO);
         }
     }
     @Test @Ignore
     public void boardRead () {
-        BoardDTO boardDTO = boardService.readBoardById(1);
+        BoardDTO boardDTO = IBoardService.readBoardById(1);
         System.out.println(boardDTO);
     }
 
@@ -51,12 +51,12 @@ public class BoardTest {
         dto.setFile_name("Junit file");
         dto.setSave_path("c:/drive");
         dto.setReg_date(new Date());
-        boardService.insertBoard(dto);
+        IBoardService.insertBoard(dto);
     }
 
     @Test
     public void deleteBoard () {
-        boardService.deleteBoardById(5);
+        IBoardService.deleteBoardById(5);
         System.out.println("check delete results.. ");
 
     }
@@ -69,7 +69,7 @@ public class BoardTest {
         boardDTO.setFile_name("update file name.jpg");
         boardDTO.setSave_path("D:/DRIVE");
         boardDTO.setReg_date(new Date(1999-01-01));
-        boardService.updateBoard(boardDTO);
+        IBoardService.updateBoard(boardDTO);
     }
 
 }

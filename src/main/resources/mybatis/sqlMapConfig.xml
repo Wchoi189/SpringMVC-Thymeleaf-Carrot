@@ -11,4 +11,18 @@
         <typeAlias alias="Board" type="com.carrot.springmvc.app.board.model.BoardDTO"/>
         <typeAlias alias="BoardNS" type="com.carrot.springmvc.app.board.dao.BoardDAO"/>
     </typeAliases>
+    <environments default = "development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://localhost/interview_assignment_db"/>
+                <property name="username" value="user"/>
+                <property name="password" value="pass"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="classpath:mybatis/mapper/boardMapperXML.xml" />
+    </mappers>
 </configuration>
