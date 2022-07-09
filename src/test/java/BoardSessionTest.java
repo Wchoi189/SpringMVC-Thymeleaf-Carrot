@@ -13,9 +13,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.Date;
 import java.util.List;
 
+//### NEEDS XML CONFIG FILE IN MYBATIS-CONFIG.XML
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations ="classpath:mybatis/mybatis-context.xml")
-public class BoardTest {
+public class BoardSessionTest {
     @Autowired
     ApplicationContext applicationContext;
 

@@ -1,12 +1,10 @@
 package com.carrot.springmvc.app.board.config;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,9 +14,11 @@ import java.beans.PropertyVetoException;
 
 @Configuration
 //@EnableTransactionManagement
-@MapperScan(basePackages = {"com.carrot.springmvc.app.board.mapper"}, sqlSessionFactoryRef = "firstDbSqlSessionFactory")
+//@MapperScan = NOT WORKING. MAPPER WORKING WITH XML ONLY. *BUG
+@MapperScan(basePackages = {"com.carrot.springmvc.app.board.mapper"})
 public class JavaConfigMyBatis {
     private static final Logger log = LogManager.getLogger(JavaConfigMyBatis.class);
+    @Autowired
     private final ApplicationContext applicationContext;
 
     public JavaConfigMyBatis(ApplicationContext applicationContext) {
@@ -40,12 +40,13 @@ public class JavaConfigMyBatis {
     }
 
 //    SqlSessionFactory + Mapper location
-    @Bean(name = "firstDbSqlSessionFactory")
-    public SqlSessionFactory sqlSessionFactory(@Qualifier("firstDataSource") DataSource dataSource) throws Exception {
-        final SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
-        factoryBean.setDataSource(dataSource);
-        factoryBean.setConfigLocation(applicationContext.getResource("src/main/resources/mybatis/mapper"));
-        return factoryBean.getObject();
-    }
+//    @Bean
+//    public SqlSessionFactory sqlSessionFactory(@Qualifier("firstDataSource") DataSource dataSource) throws Exception {
+//        final SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
+//        factoryBean.setDataSource(dataSource);
+//        factoryBean.setConfigLocation(applicationContext.getResource("src/main/resources/mybatis/application-context.xml"));
+//        factoryBean.setMapperLocations(applicationContext.getBean("boardMapper","com.carrot.springmvc.app.board.mapper.BoardMapperJava.class");
+//        return factoryBean.getObject();
+//    }
 }
 

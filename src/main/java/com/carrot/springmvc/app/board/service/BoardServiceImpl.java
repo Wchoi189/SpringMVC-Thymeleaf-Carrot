@@ -1,24 +1,19 @@
 package com.carrot.springmvc.app.board.service;
 
-import com.carrot.springmvc.app.board.mapper.BoardMapper;
+
 import com.carrot.springmvc.app.board.mapper.BoardMapperJava;
 import com.carrot.springmvc.app.board.model.BoardDTO;
-import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service("boardService")
+//@Repository
 public class BoardServiceImpl implements IBoardService {
 
-        @Autowired
-        private BoardMapperJava mapper;
-
-//    String namespace = "com.carrot.springmvc.app.board.dao.BoardDAO";
-//
-//    public BoardServiceImpl(SqlSession sqlSession) {
-//        this.sqlSession = sqlSession;
-//    }
+    @Autowired
+    private  BoardMapperJava mapper;
+    //No Qualifying type of Bean found. ???
 
     @Override
     public List<BoardDTO> getBoardList() {
@@ -45,6 +40,6 @@ public class BoardServiceImpl implements IBoardService {
 
     @Override
     public void deleteBoardById(int board_id) {
-        mapper.deleteBoardById();
+        mapper.deleteBoardById(board_id);
     }
 }

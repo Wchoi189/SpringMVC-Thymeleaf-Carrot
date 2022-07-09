@@ -1,11 +1,10 @@
 package com.carrot.springmvc.app.board.controller;
 
-import com.carrot.springmvc.app.board.dao.BoardDAO;
 import com.carrot.springmvc.app.board.model.BoardDTO;
+import com.carrot.springmvc.app.board.service.IBoardService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,19 +17,9 @@ import java.util.List;
 public class BoardController {
     private final Logger LOGGER = LoggerFactory.getLogger(getClass());
 
-//@Qualifier("Service")
 @Autowired
-@Qualifier("BoardDAO")
-private BoardDAO boardDAO;
 
-//    private BoardService boardDAO;
-
-//    public BoardController(@Qualifier("Service") BoardService boardDAO) {
-//        this.boardDAO = boardDAO;
-//    }
-
-//    @Autowired
-//    BoardMapper boardDAO;
+private IBoardService boardDAO;
 
     @GetMapping("/")
     public String boardHome (Model theModel1) {
